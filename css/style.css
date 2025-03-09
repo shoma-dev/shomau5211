@@ -1,0 +1,286 @@
+* {
+    margin:0;
+    padding:0;
+}
+html,　body {
+    height: 100%;
+  }
+body {
+    background-color:#fff;
+}
+header {
+    display: flex;
+    width:100%;
+    height: 100px;
+    background-color:#000;
+    align-items: center;
+    opacity:0.8;
+    width: 100%; /* 幅いっぱいを指定 */
+    height: 50px; /* 高さを50pxに指定 */
+    background: #CCC; /* 背景色にグレーを指定 */
+    padding: 20px 50px; /* ヘッダーに上下左右それぞれ余白を指定 */
+    box-sizing: border-box; /* padding分を含んで幅を100%にするため */
+    position: fixed; /* ウィンドウを基準に画面に固定 */
+    top: 0; /* 上下の固定位置を上から0pxにする */
+    left: 0; /* 左右の固定位置を左から0pxにする */
+    display: flex; /* 中の要素を横並びにする */
+    align-items: center; /* 中の要素を上下中央に並べる */
+    z-index: 2;
+}
+header h1 {
+    color:#000;
+}
+.title {
+    margin-right: auto;
+}
+.menu-item {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+}
+a {
+    text-decoration: none;
+    color:#000;
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Sawarabi Mincho', serif;
+    transition-duration: 1s;
+}
+/*MAIN*/
+/*TOP*/
+.top img {
+    width:  100%;
+    height: 400px;
+    object-fit: cover;
+}
+.top-contents {
+    margin-bottom: 100px;
+}
+.top-contents h1 {
+    text-align: center;
+}
+.top-contents p {
+    text-align: center;
+}
+/*ABOUTME*/
+.aboutme {
+    text-align: center;
+}
+.aboutme-title {
+    font-family: 'Architects Daughter', cursive;;
+}
+.aboutme img {
+    width:  200px;       
+    height: 200px;       
+    object-fit: cover;
+    border-radius: 50%;
+}
+.aboutme-box {
+    margin-top: 10px;
+    margin-bottom: 200px;
+    margin-right: 350px;
+    margin-left: 350px;
+    color: #474747;
+    background: whitesmoke;/*背景色*/
+    border-left: double 7px #4ec4d3;/*左線*/
+    border-right: double 7px #4ec4d3;/*右線*/
+}
+.aboutme-box p {
+    margin: 0; 
+    padding: 0;
+    text-align: left;
+}
+
+
+/*SERVICE*/
+.service {
+    text-align: center;
+    margin-bottom: 200px;
+}
+.service-title {
+    font-family: 'Architects Daughter', cursive;;
+}
+p,h1,h2 {
+    text-align: center;
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Sawarabi Mincho', serif;
+}
+.service-contents {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.service-box {
+    margin-right: 20px;
+}
+.service img {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+/*WORKS*/
+/* .works {
+    text-align: center;
+    margin-bottom: 200px;
+}
+.works-title {
+    font-family: 'Architects Daughter', cursive;;
+}
+.works-contents {
+    margin-bottom: 100px;
+} */
+/*CONTACT*/
+.contact {
+    text-align: center;
+    margin-bottom: 200px;
+}
+.contact p {
+    margin-bottom: 30px;
+}
+.contact-title {
+    font-family: 'Architects Daughter', cursive;;
+}
+.botann {
+    border-radius: 5px;
+    background-color: lightblue;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+  }
+.contact-contents {
+    margin-bottom: 100px;
+}
+  /*FOOTER*/
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+   
+  #footer01 {
+    position: relative;
+    background: #222;
+  }
+   
+  #footer01 .logo {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #111;
+  }
+  #footer01 .nav a {
+    display: block;
+    padding: 0 10px;
+    color: #ccc;
+  }
+  .footer {
+      margin-bottom:0px;
+  }
+
+  /*アニメーション*/
+  .fade {
+    transition: all 2000ms;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0px, 50px);
+  }
+
+  .fadein {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0px, 0px);
+  } 
+
+  /*トップ*/
+  .top-text {
+    font-size: 30px;
+    position: absolute;
+    top: 200px;
+    left: 50px;
+  }
+
+  /*エフェクト*/
+  .reveal-text,
+.reveal-text::after {
+  animation-delay: var(--animation-delay, 2s);
+  animation-iteration-count: var(--iterations, 1);
+  animation-duration: var(--duration, 800ms);
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.reveal-text {
+  --animation-delay: var(--delay, 0);
+  --animation-duration: var(--duration, 800ms);
+  --animation-iterations: var(--iterations, 1);
+  position: relative;
+  font-family: 'Architects Daughter', cursive;
+font-family: 'Sawarabi Mincho', serif;
+  font-size: 50px;
+  animation-name: clip-text;
+  color: #FFF;
+  white-space: nowrap;
+  cursor: default;
+}
+
+::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0bdfee;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    pointer-events: none;
+    animation-name: text-revealer;
+  }
+
+
+@keyframes clip-text {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+
+@keyframes text-revealer {
+  
+  0%, 50% {
+    transform-origin: 0 50%;
+  }
+  
+  60%, 100% {
+    transform-origin: 100% 50%;   
+  }
+
+  
+  60% {
+    transform: scaleX(1);
+  }
+  
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+/*CONTACT-BTN*/
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+  background-color: #eb6100;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #f56500;
+}
+
+.fa-position-left {
+  position: absolute;
+  top: calc(50% - .5em);
+  left: 1rem;
+}
